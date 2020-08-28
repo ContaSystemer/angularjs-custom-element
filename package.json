@@ -1,0 +1,42 @@
+{
+    "name": "@contasystemer/angularjs-custom-element",
+    "version": "1.0.0",
+    "description": "AngularJS custom element module provides functionality to wrap directive/component with custom element.",
+    "main": "index.js",
+    "scripts": {
+        "test": "karma start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/contasystemer/angularjs-custom-element.git"
+    },
+    "keywords": [
+        "Conta",
+        "AngularJS",
+        "Custom Element",
+        "Elm",
+        "Migration"
+    ],
+    "author": "Conta AS development team",
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/contasystemer/angularjs-custom-element/issues"
+    },
+    "homepage": "https://github.com/contasystemer/angularjs-custom-element#readme",
+    "dependencies": {
+        "@contasystemer/angularjs-assert": "^1.0.3",
+        "lodash": "^4.17.20"
+    },
+    "devDependencies": {
+        "@webcomponents/webcomponentsjs": "^2.4.4",
+        "angular": "^1.7.9",
+        "angular-mocks": "^1.7.9",
+        "karma": "^5.1.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-jasmine": "^4.0.1",
+        "puppeteer": "^5.2.1"
+    },
+    "peerDependencies": {
+        "angular": "^1.7.9"
+    }
+}
