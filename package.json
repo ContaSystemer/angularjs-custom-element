@@ -1,6 +1,6 @@
 {
     "name": "@contasystemer/angularjs-custom-element",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "AngularJS custom element module provides functionality to wrap directive/component with custom element.",
     "main": "index.js",
     "scripts": {

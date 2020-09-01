@@ -363,7 +363,7 @@
          * ```
          * viewContaComponent : Html Msg
          * viewContaComponent =
-         *     Html.angularComponentWithTransclusion
+         *     AngularCustomElement.viewWithTransclusion
          *         { componentName = "cs-component-element"
          *         , attributes =
          *             [ Attrs.attribute "cs-required" ""
