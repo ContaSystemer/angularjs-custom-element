@@ -36,7 +36,10 @@ jobs:
         with:
           registry-url: https://npm.pkg.github.com/
           scope: '@contasystemer'
-      - run: echo "::set-env name=NODE_AUTH_TOKEN::${{secrets.PUBLISH_GITHUB_TOKEN}}"
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
       - run: echo registry=https://npm.pkg.github.com/contasystemer >> .npmrc
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
