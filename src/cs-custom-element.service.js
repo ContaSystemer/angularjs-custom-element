@@ -34,6 +34,7 @@
 
         var service = {
             create: create,
+            extendVm: extendVm,
             helper: {
                 decode: decode,
             },
@@ -130,17 +131,6 @@
                  */
                 identity: _.identity,
             },
-            /**
-             * @ngdoc method
-             * @name csCustomElement#extendVm
-             *
-             * @description
-             * Extends custom element scope's `vm`.
-             *
-             * @param {Object} vm Current `vm`.
-             * @returns {Object} Extended `vm`.
-             */
-            extendVm: _.identity,
         };
 
         return service;
@@ -457,7 +447,7 @@
 
                 // Create custom element scope which is used as a store of data and as a parent for component scope.
                 self.$scope = $rootScope.$new();
-                self.$scope.vm = service.extendVm({});
+                self.$scope.vm = service.extendVm(self, {});
 
                 return self;
             };
@@ -716,6 +706,23 @@
                 _.isPlainObject(property) && hasGetSetProperties,
                 'Binding "' + bindingName + '" should be have either setter or getter or both'
             );
+        }
+
+        // VM
+
+        /**
+         * @ngdoc method
+         * @name csCustomElement#extendVm
+         *
+         * @description
+         * Extends custom element scope's `vm`.
+         *
+         * @param {HTMLElement} self Reference to the custom element.
+         * @param {Object} vm Current `vm`.
+         * @returns {Object} Extended `vm`.
+         */
+        function extendVm(self, scope) {
+            return scope;
         }
 
         // DECODERS
